@@ -1,0 +1,478 @@
+
+@import url('https://fonts.google.com/share?selection.family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Telex&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+/* Aplicar la fuentes */
+
+h2 {
+    font-family: 'Telex', serif;       /* Fuente para h2 */
+}
+h3 {
+    font-family: 'Telex', serif;       /* Fuente para h2 */
+}
+p {
+    font-family: 'Inter', sans-serif; /* Fuente para párrafos */
+    font-weight: 300; 
+    font-style: italic;
+}
+a{
+    font-family: 'Inter', sans-serif; /* Fuente para párrafos */ 
+    font-weight: 300;
+}
+*{
+   margin: 0;
+   padding: 0; 
+   box-sizing: border-box;
+   text-decoration: none; /*quita linea de enlaces*/
+   list-style: none; /*quita las bolitas de la lista*/
+}
+/*parametros para ajuste*/
+.container { 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ /*cabecera*/
+ .header{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)),
+        url(imagenes/Imagen-destacada-6.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+ }
+ /*menu*/
+  .menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+.logo img{width: 80px; }
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 15px;
+    color: #bfbfbf;
+    display: block;
+    font-weight: 600;
+    text-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.menu .navbar ul li a:hover{
+    color: white;
+    text-shadow: 0 8px 12px rgba(255, 255, 255, 0.5);
+} 
+
+#menu {display: none;}/*ya no se ve el checkbox*/
+.menu-i img{width: 25px;}
+.menu label{ cursor: pointer;
+    display: none;
+}
+/*texto de inicio*/
+.header-content {text-align: center;}
+.header-content h1 {
+    font-family: 'Inter', sans-serif;  /* Fuente para h1 */
+    font-weight: 700;                  /* Bold (negrita) para h1 */
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    transition: all 0.2s  ;
+}
+.header-content p{
+    color: #c5c5c5;
+}
+/*botones*/
+.btn1, .btn2{
+    margin-top: 1em;
+    display: inline-flex;
+    justify-content: space-between; /* Espacio máximo entre los botones */
+    padding: 5px 30px;
+    background-color:#94d2bd;
+    color: black;
+    border-radius: 5px; /* Redondea las esquinas de los botones */
+    transition: background-color 0.3s ease; /* Agrega una transición suave */
+}
+.btn1:hover, .btn2:hover{
+    background-color: #005f73;
+    font-weight: 700;
+    color: white;
+}
+
+/* Sección 2 About */
+.about {
+    position: relative; /* Asegúrate de que el contenedor sea relativo */
+    padding: 50px 0;
+    background-color: #4e88a2;
+    display: flex; /* Utiliza flexbox para organizar los elementos en fila */
+    align-items: center; /* Alinea los elementos verticalmente */
+    justify-content: space-between; /* Espacio entre la imagen y el texto */
+    overflow: hidden; /* Asegúrate de que el pseudo-elemento no se salga del contenedor */
+}
+
+.about::before {
+    content: ''; /* Necesario para crear el pseudo-elemento */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Coloca en la parte superior */
+    left: 0; /* Coloca en la parte izquierda */
+    right: 0; /* Coloca en la parte derecha */
+    bottom: 0; /* Coloca en la parte inferior */
+    background-image: url('imagenes/textura.png'); /* Ruta a la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+    opacity: 0.2; /* Aplica la transparencia */
+    z-index: 1; /* Asegúrate de que la imagen de fondo esté detrás del texto */
+}
+
+.about .alogo {
+    width: 50%; /* Ajusta el tamaño de la imagen */
+    text-align: center;
+    z-index: 2; /* Asegúrate de que la imagen del logo esté delante */
+}
+
+.about .about-txt {
+    width: 50%; /* Ajusta el tamaño del contenedor de texto */
+    padding-left: 10px; /* Añade algo de espacio entre la imagen y el texto */
+    z-index: 2; /* Asegúrate de que el texto esté delante */
+}
+
+.about-txt h2 {
+    font-size: 40px; /* Ajusta el tamaño del título */
+    line-height: 45px;
+    color: #ffffff;
+    margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+}
+
+.about-txt p {
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 0; /* Asegura que no haya margen extra encima del párrafo */
+}
+
+/*caracteristicas*/
+/* Estilo general del contenedor de características */
+.characters {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+    ), url(imagenes/woman-headphones.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Encabezado de la sección */
+.characters h2 {
+    font-size: 55px;
+    line-height: 70px;
+    margin-bottom: 15px;
+    text-transform: unset;
+}
+
+/* Texto descriptivo */
+.characters p {
+    font-size: 12px;
+    color: #c5c5c5;
+    padding: 0 10px;
+    margin-bottom: 70px;
+}
+
+/* Contenedor de características */
+.Carac {
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start; /* Mantiene los elementos en una sola línea */
+    align-items: center; /* Alinea verticalmente los elementos */
+    flex-wrap: nowrap; /* Evita que los elementos se muevan a nuevas filas */
+    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+}
+
+/* Elementos individuales de características (imagenes) */
+.characters .tiempoR img, 
+.characters .Colab img, 
+.characters .nuevosA img, 
+.characters .AudioE img {
+    width: 100px; 
+    max-width: 100%; /* Hace que la imagen se ajuste al tamaño del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 1023px) {
+    .Carac {
+        justify-content: center; /* Centra los elementos en pantallas más pequeñas */
+        flex-wrap: wrap; /* Permite que se envuelvan en pantallas más pequeñas */
+    }
+    .characters h2 {
+        font-size: 40px; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+    .characters p {
+        font-size: 10px; /* Tamaño de fuente más pequeño para texto descriptivo */
+    }
+    .characters .tiempoR img, 
+    .characters .Colab img, 
+    .characters .nuevosA img, 
+    .characters .AudioE img {
+        width: 80px; /* Tamaño adaptativo más pequeño en pantallas pequeñas */
+    }
+}
+/*Paquete de servicios*/
+/* Estilo general del contenedor de servicios */
+.package-service {
+    padding: 50px 0; /* Espaciado superior e inferior */
+    background-color: #124559 ; /* Color de fondo */
+}
+
+/* Encabezado de la sección */
+.package-service-head {
+    text-align: center; /* Centrar texto */
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.package-service-head h2 {
+    font-size: 2.5rem; /* Tamaño de fuente */
+    color: #f8f8f8; /* Color del texto */
+}
+
+.package-service-head p {
+    font-size: 1.1rem; /* Tamaño de fuente */
+    color: #d2d2d2; /* Color del texto */
+}
+
+/* Contenedor interno de los servicios */
+.package-service-inner {
+    display: flex; /* Utilizar flexbox para alineación */
+    justify-content: space-between; /* Espaciado entre elementos */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas pequeñas */
+    padding: 0 15px; /* Espaciado lateral */
+}
+
+/* Estilo de cada elemento de servicio */
+.package-service-item {
+    background-color: white; /* Fondo blanco para las tarjetas */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para efecto de profundidad */
+    flex: 1 1 calc(30% - 20px); /* Cada tarjeta ocupará aproximadamente un 30% del ancho con espacio entre ellas */
+    margin: 10px; /* Espaciado entre tarjetas */
+    transition: transform 0.3s; /* Transición para efectos hover */
+}
+
+/* Efecto hover para las tarjetas */
+.package-service-item:hover {
+    transform: scale(1.05); /* Escalar ligeramente al pasar el cursor */
+}
+
+/* Estilos para el botón */
+.btn {
+    display: inline-block; /* Para que el botón ocupe solo el espacio necesario */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    color: white; /* Color del texto */
+    background-color: #007bff; /* Color de fondo del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .package-service-inner {
+        justify-content: center; /* Centrar los elementos */
+    }
+
+    .package-service-item {
+        flex: 1 1 calc(90% - 20px); /* Cada tarjeta ocupará el 90% del ancho en pantallas pequeñas */
+        margin: 10px 0; /* Espaciado entre tarjetas en vertical */
+    }
+
+    .package-service-head h2 {
+        font-size: 2rem; /* Tamaño de fuente más pequeño */
+    }
+
+    .package-service-head p {
+        font-size: 1rem; /* Tamaño de fuente más pequeño para descripción */
+    }
+}
+
+
+/* Estilo general del contenedor de video */
+.vm {
+    position: relative;
+    padding: 5vw 0; /* Margen superior e inferior adaptativo */
+    background-color: #aec3b0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Fondo en pseudo-elemento */
+.vm::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('imagenes/train-station-railway-passengers.jpg');
+    background-size: cover;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+/* Contenedor del video */
+.vm .videom {
+    z-index: 2;
+    width: 80vw; /* Adaptativo al ancho de la pantalla */
+    max-width: 100%; /* Para asegurar que no se desborde */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* Contenedor del encabezado */
+.vidm {
+    text-align: center;
+    width: 90vw; /* Anchura adaptativa */
+    max-width: 100%;
+}
+
+/* Encabezado */
+.vm h2 {
+    font-size: 6vw; /* Tamaño adaptativo del texto */
+    line-height: 1.2;
+    color: #ffffff;
+    text-transform: unset;
+    margin-bottom: 3vw;
+    z-index: 2;
+}
+
+/* Ajustes de fuente en pantallas pequeñas */
+@media (max-width: 768px) {
+    .vm h2 {
+        font-size: 8vw; /* Texto más grande en pantallas pequeñas */
+    }
+    .vm .videom {
+        width: 95vw; /* Ancho mayor para pantallas pequeñas */
+    }
+}
+
+/*parte final*/
+/*parte final*/
+/* Estilo general para la sección "Nosotros" */
+.END {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)),
+        url(imagenes/56ae702a337769bcaa6fefaab1b155b5.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    position: relative; /* Permite posicionar elementos sobre la imagen */
+    text-align: center; /* Centra el texto */
+    padding: 50px 0; /* Espaciado superior e inferior */
+
+}
+
+/* Estilo para la imagen de fondo */
+.ff {
+    width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    position: relative; /* Asegura que el texto se coloque sobre ella */
+}
+
+/* Estilo para los títulos */
+h2 {
+    margin-top: 20px; /* Espacio superior */
+    font-size: 2.5rem; /* Tamaño de fuente */
+    color: #9c9c9c; /* Color del texto */
+}
+
+/* Estilo para los nombres */
+h3 {
+    margin: 5px 0; /* Espaciado entre nombres */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    color: #b7b7b7; /* Color del texto */
+}
+
+/* Contenedor específico para las imágenes de los logos */
+.image-container {
+    display: flex; /* Permite que las imágenes se alineen horizontalmente */
+    justify-content: center; /* Centra horizontalmente las imágenes */
+    align-items: center; /* Alinea las imágenes verticalmente */
+    flex-wrap: wrap; /* Permite que las imágenes se adapten a pantallas más pequeñas */
+    margin-top: 20px; /* Espacio superior para separarlas del contenido anterior */
+}
+
+/* Estilo para las imágenes de los logos */
+.logoSW, .Lupc {
+    flex: 1 1 150px; /* Permite que las imágenes se adapten al espacio */
+    max-width: 150px; /* Tamaño máximo para las imágenes */
+    height: auto; /* Mantiene la relación de aspecto */
+    margin: 10px; /* Margen entre las imágenes */
+}
+
+/* Estilos para el menú vertical */
+@media (max-width: 991px) {
+    .menu {
+        padding: 30px;
+    }
+
+    /* Checkbox visible solo en pantallas pequeñas */
+    .menu label {
+        display: block; /* Visible en pantallas pequeñas */
+    }
+
+    /* Menú vertical oculto inicialmente */
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    /* Mostrar el menú vertical cuando se activa el checkbox */
+    #menu:checked + label + .navbar {
+        display: flex;
+    }
+
+    .menu .navbar ul {
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+    }
+
+    .menu .navbar ul li {
+        width: 100%; /* Elementos en bloque */
+        text-align: center;
+        padding: 15px 0;
+        border-top: 1px solid #444; /* Línea divisoria */
+    }
+
+    .menu .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .header {
+        min-height: 60vh; /* Ajuste de altura */
+    }
+
+    .header-content {
+        padding: 100px 30px;
+    }
+}
