@@ -2,6 +2,7 @@
 @import url('https://fonts.google.com/share?selection.family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Telex&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
 /* Aplicar la fuentes */
 
 h2 {
@@ -36,7 +37,7 @@ a{
     background-image: linear-gradient(
         rgba(0,0,0,0.6),
         rgba(0,0,0,0.6)),
-        url(imagenes/Imagen-destacada-6.jpg);
+        url(/imagenes/Imagen-destacada-6.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -127,7 +128,7 @@ a{
     left: 0; /* Coloca en la parte izquierda */
     right: 0; /* Coloca en la parte derecha */
     bottom: 0; /* Coloca en la parte inferior */
-    background-image: url('imagenes/textura.png'); /* Ruta a la imagen */
+    background-image: url('/imagenes/puntos1.png'); /* Ruta a la imagen */
     background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
     opacity: 0.2; /* Aplica la transparencia */
     z-index: 1; /* Asegúrate de que la imagen de fondo esté detrás del texto */
@@ -164,7 +165,7 @@ a{
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.7)
-    ), url(imagenes/woman-headphones.jpg);
+    ), url(/imagenes/woman-headphones.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -328,7 +329,7 @@ a{
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('imagenes/train-station-railway-passengers.jpg');
+    background-image: url('/imagenes/train-station-railway-passengers.jpg');
     background-size: cover;
     opacity: 0.2;
     z-index: 0;
