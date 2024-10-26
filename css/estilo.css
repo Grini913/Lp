@@ -377,7 +377,7 @@ a{
     background-image: linear-gradient(
         rgba(0,0,0,0.6),
         rgba(0,0,0,0.6)),
-        url(imagenes/56ae702a337769bcaa6fefaab1b155b5.png);
+        url(/imagenes/56ae702a337769bcaa6fefaab1b155b5.png);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
